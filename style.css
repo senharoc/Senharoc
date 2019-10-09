@@ -1,0 +1,131 @@
+/*  RESET THE SIZE OF PAGE  */
+body,html{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+}
+/*  HERO IMAGE  */
+.section-hero{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.bg__svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    background-image: linear-gradient(to bottom,
+        rgba(0, 0, 0, 1),        
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 1));
+}
+.bg__svg svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+}
+
+/*  PAGE LOGO   */
+.logo{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    text-align: center;    
+}
+.logo h1{
+    color: white;
+    letter-spacing: 8px;
+    background-color: black;
+    background-image: linear-gradient(-45deg,red 50%, black 50%);
+    padding: 1rem;
+    padding-right:5px; 
+    border: white solid 2px;
+}
+
+/*  SOCIAL ICONS    */
+.social_icons{
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    color: red;
+}
+.social_icons a{
+    fill: white;
+    background-color: black;
+    border: 2px solid white;
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+    margin: 2px;
+}
+/*  BURGER MENU */
+.burger{
+    fill: white;
+    background-color: black;
+    position: absolute;
+    top: 5%;
+    right: 1%;
+    transform: translate(0, -50%);
+    padding: 5px;
+    height: 20px;
+    width: 20px;
+    z-index: 2;
+}
+/*  POPOUT ABOUT    */
+.container__about{
+    position: absolute;
+    text-align: justify;
+    padding: 0 1rem;
+    width: 80%;
+    max-width: 1000px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 2px solid white;
+    color: white;
+    line-height: 1.2rem;
+    right: 0px;
+}
+.container__about a{
+    text-decoration: none;
+    color: red;
+    text-transform: uppercase;
+}
+
+/*  MEDIA QUERIES   */
+@media screen and (min-width:500px){
+    .logo h1{letter-spacing: 16px;font-size: 48px;}
+    .social_icons a{height: 60px;width: 60px;margin: 5px;}
+    .burger {height: 40px;width: 40px;}
+}
+@media screen and (min-width:750px){
+    .logo h1{letter-spacing: 16px;font-size: 64px;}
+    .burger {height: 50px;width: 50px;}
+    .container__about {font-size: 1.5rem;line-height: 2rem;}
+}
+@media screen and (min-width:1000px){
+    .logo h1{letter-spacing: 24px;font-size: 96px;}
+    .social_icons a{height: 80px;width: 80px;margin: 10px;}
+    .burger {height: 80px;width: 80px;}
+    .container__about {font-size: 2rem;line-height: 2.5rem;}
+}
+@media screen and (min-width:2500px){
+    .logo h1{letter-spacing: 48px;font-size: 160px;}
+    .social_icons a{height: 160px;width: 160px;margin: 20px;}
+    .burger {height: 120px; width: 120px;}
+    .container__about {font-size: 2.5rem;line-height: 3rem;}
+}
